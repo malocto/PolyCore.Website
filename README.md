@@ -1,6 +1,6 @@
 # PolyCore Product Concept Website
 
-Responsive multi-page concept website for PolyCore, a planned Windows-first 3D file-format library/toolkit. Technical positioning: **C# core/framework + planned WinUI 3 Windows client**. The JT reader in this repository is the working technical foundation; no DLL acquisition is pending. The desktop client and additional format support are roadmap items.
+Responsive multi-page concept website for PolyCore, a planned Windows-first 3D file-format library/toolkit. Technical positioning: **C# core/framework + planned WinUI 3 Windows client**. The JT reader in the sibling `../PolyCore/` workspace is the working technical foundation; no DLL acquisition is pending. The desktop client and additional format support are roadmap items. This folder is an independent git repository, extracted from the public repo during the 2026-11-23 restructure.
 
 ## Pages
 - `index.html` — landing page
