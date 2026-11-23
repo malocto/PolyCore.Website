@@ -31,7 +31,9 @@ The existing C#/.NET 10 JT parser is integrated source-first as `PolyCore.Format
 memory. It maps the full LSG hierarchy into the neutral document model, including world transforms,
 instance fan-out and optional opaque source payloads.
 
-**SDK-API-CONCEPT review (2026-11-23)** — findings recorded in `../PolyCore/docs/archive/Hardening_Plan.md`:
+**SDK-API-CONCEPT review (2026-11-23)** — findings (ARM64 CI, large-file spooling, async/cancel,
+logging hook, packaging) are summarized in `../PolyCore/docs/POLYCORE_PRODUCT_PLAN.md` and
+`../PolyCore/docs/TODO.md`:
 
 - **x86/x64/ARM64 support** — the reader has no architecture-specific code or intrinsics (only
   portable `unchecked` bit reinterpretation); public CI runs the `windows-latest` (x64) runner.
