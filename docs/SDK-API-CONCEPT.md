@@ -53,7 +53,7 @@ instance fan-out and optional opaque source payloads.
 - **Logging** — the reader throws without emitting logs; diagnostics live in the Framework
   (`PolyCore.Framework` job diagnostics). Recommendation: optional structured log hook for
   malformed-input events in a later phase.
-- **Versioning and package/deployment** — `VersionPrefix 0.2.0`, SourceLink, PDBs/snupkg and README
+- **Versioning and package/deployment** — `VersionPrefix 0.3.0`, SourceLink, PDBs/snupkg and README
   packed for packages; public CI (restore → build → test → `dotnet list package --vulnerable
   --include-transitive`) has no publish workflow (decision: publish when 1.0.0/legal terms are
   ready); the vulnerability scan is green today.
@@ -68,7 +68,7 @@ public interface IFormatAdapter
 }
 ```
 
-The JT adapter may expose read-only inspection initially, with write support only if the parser/serializer supports it. Do not infer capability from extension alone.
+The JT adapter is read-only; there is no JT writer. Do not infer capability from extension alone.
 
 ## Data model
 A shared scene document may contain nodes, transforms, mesh geometry, materials, textures, cameras, lights, animation data, metadata and source-specific payloads. Unsupported or untranslatable properties should be reported explicitly.
@@ -77,4 +77,4 @@ A shared scene document may contain nodes, transforms, mesh geometry, materials,
 Use WinUI 3 with MVVM separation: view state and commands in ViewModels; import/export/job orchestration in services; scene and format capabilities in Core. Keep format-specific implementation out of UI code.
 
 ## Prototype status
-Website code samples are illustrative, not a committed API. Naming, async patterns and contracts should be validated against the actual repository and parser.
+Website code samples are illustrative, not a committed API. Naming, async patterns and contracts should be validated against the `../PolyCore/` parser and current docs.
