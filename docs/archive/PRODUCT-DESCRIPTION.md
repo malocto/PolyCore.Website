@@ -1,5 +1,8 @@
 # PolyCore — Produktbeschreibung
 
+> **Historisches Dokument** — archiviert 2026-11-23. Aktuelle Produktbeschreibung:
+> `../PRODUCT-BRIEF.md` (EN) und `../../README.md`.
+
 ## Zusammenfassung
 PolyCore ist ein geplantes Windows-first Produkt zur Verarbeitung, Inspektion und Konvertierung von 3D-Dateien. Die Software soll aus einem C# Core und C# Framework bestehen. Als Windows GUI ist ein WinUI 3 Client auf Basis eines Windows Client Templates vorgesehen.
 

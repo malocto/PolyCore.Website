@@ -1,5 +1,7 @@
 # Website Professionalization Recommendations
 
+> **Historical document** — archived 2026-11-23. Current site planning: `../WEBSITE-ROADMAP.md`.
+
 ## Positioning
 Lead with the C# core/framework and WinUI 3 Windows desktop client. Present the existing JT parser as the initial technical foundation, not as validated full JT support until tests and capabilities are documented.
 
