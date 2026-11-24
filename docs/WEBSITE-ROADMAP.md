@@ -8,9 +8,11 @@ Present PolyCore as a C#/.NET 10 core/framework with a planned WinUI 3 Windows d
 
 ## Professionalization priorities
 1. Replace concept illustrations with real screenshots as UI implementation matures.
-2. Publish JT capability details only after parser validation.
+2. ~~Publish JT capability details only after parser validation.~~ Done: validated reader and
+   committed compatibility matrix in the public repo.
 3. Create release notes, supported Windows/.NET versions, compatibility table and security/licensing pages.
-4. Add benchmark methodology and reproducible test results.
+4. ~~Add benchmark methodology and reproducible test results.~~ Done: `docs/BENCHMARKING.md` in the
+   public repo; link from this site when publishing is allowed.
 5. Add documentation navigation, API reference and support/contact workflows.
 6. Make format matrix capability-specific and mark planned, tested and released states separately.
 7. Ensure transparent image assets have real alpha channels and optimize file size.

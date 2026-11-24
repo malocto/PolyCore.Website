@@ -21,7 +21,7 @@ For every format, track: read, write, preview, geometry, materials, textures, an
 ## JT acceptance plan
 1. Inventory parser features and supported JT versions/variants.
 2. Establish a representative corpus and expected outputs.
-3. Measure load time and memory on small/medium/large files.
+3. ~~Measure load time and memory on small/medium/large files.~~ Done: see public `docs/BENCHMARKING.md`.
 4. Validate hierarchy, transforms, tessellation, metadata and assembly structure.
 5. Test cancellation, malformed files and error reporting.
-6. Determine source integration vs DLL wrapper and redistribution obligations.
+6. Source integration is decided (source-first adapter); redistribution obligations remain open.
