@@ -1,0 +1,85 @@
+PolyCore website - REAL desktop screenshot manifest
+Generated 2026-11-25 (task 10, polycore-back-on-track).
+
+All three PNGs below are unmodified screen captures of the actual running
+standalone WinUI 3 x64 Release application. No compositing, no mockups, no
+image editing. The only setup was seeding the app's own persistence files and
+driving its real UI with UIAutomation; every state shown was produced by the
+app itself and confirmed by the binary observables listed per image.
+
+APP BUILD (final build used for every capture)
+  Command: dotnet build PolyCore.Desktop.sln -c Release -p:Platform=x64
+  Workdir: C:\tmp\PolyCoreProject\PolyCore.Commercial
+  Exit: 0 (0 warnings, 0 errors)
+  Binary: C:\tmp\PolyCoreProject\PolyCore.Commercial\src\PolyCore.Desktop.App\bin\x64\Release\net10.0-windows10.0.26100.0\win-x64\PolyCore.Desktop.exe
+  Binary LastWriteTime after build: 2026-11-25T14:23:35 (source HEAD 0922e87, includes task 12 watch UI)
+
+CAPTURE COMMAND (single final run)
+  powershell -NoProfile -ExecutionPolicy Bypass -File C:\Users\roesl\AppData\Local\Temp\opencode\task10-shots\capture.ps1
+  Exit: 15 (CAPTURE_PASS=False ONLY because the process-exit assertion failed;
+            all three screenshots were captured and all UI state assertions passed)
+  Log: C:\Users\roesl\AppData\Local\Temp\opencode\task10-shots\capture-final.log
+  Method: UIAutomation (InvokePattern / SelectionItemPattern / ValuePattern) +
+          user32 SetForegroundWindow + System.Drawing.Graphics.CopyFromScreen
+          on the real window BoundingRectangle. Window maximized first.
+
+-------------------------------------------------------------------------------
+1) polycore-viewer-jt95-real.png  (1120x760)
+   State shown: INTERNAL / TESTED - Viewer page with a decoded JT 9.5 fixture.
+   Source fixture: C:\tmp\PolyCoreProject\PolyCore\testfiles\Casting_Demo_jt95.jt
+     (existing local test input; NOT committed to this repo)
+   How the state was produced: Import page -> File textbox set to the fixture ->
+     Import button -> Viewer page -> "Got it" hint dismissed -> "Fit all" clicked.
+   Binary observables from capture-final.log:
+     IMPORT_STATUS=Imported 97 node(s), 58 mesh(es).
+     VIEWER_STATUS=57.689 vertices, 64.734 triangles, 19 nodes - LOD 0
+   Visible in image: 3D viewport with decoded mesh, scene explorer tree,
+     properties pane, and the vertex/triangle/node status line.
+
+2) polycore-batch-mixed-statuses-real.png  (1120x760)
+   State shown: INTERNAL / TESTED - Batch queue page with mixed job statuses.
+   Source fixtures (queue seeded into the app's own persistence file before launch):
+     C:\tmp\PolyCoreProject\PolyCore\testfiles\Casting_Demo_jt95.jt
+     C:\tmp\PolyCoreProject\PolyCore\testfiles\nist-mtc-assembly.jt
+     C:\tmp\PolyCoreProject\PolyCore\testfiles\nist-mtc-crada-assembly-jt105.jt
+     C:\Users\roesl\AppData\Local\Temp\opencode\task10-shots\does-not-exist.jt (deliberately missing)
+   How the state was produced: four Created jobs seeded into
+     %LocalAppData%\PolyCore.Desktop\batch-queue.json before launch; real app
+     loaded them; "Start queue" clicked; third job cancelled via its row's
+     Cancel button; remaining jobs processed by the real BatchQueueService.
+   Binary observables from capture-final.log:
+     OBSERVE_COMPLETED=2 OBSERVE_FAILED=2 OBSERVE_CANCELLED=1
+     FAIL_REASON=File not found: '...\does-not-exist.jt'.
+   Visible in image: two Completed rows, one Cancelled row, one Failed row with
+     its failure reason, plus progress bars and Cancel/Retry/Remove controls.
+
+3) polycore-watched-folders-real.png  (1120x760)
+   State shown: INTERNAL / TESTED - Watched folders section of the Batch page,
+     one folder configured and watching active, with a watcher-enqueued job.
+   Source fixture written into the watched folder:
+     C:\tmp\PolyCoreProject\PolyCore\testfiles\Casting_Demo_jt95.jt
+   How the state was produced: "Folder path" textbox set to the temp watched
+     directory -> "Add folder" -> "Start watch" -> real fixture copied into the
+     watched directory -> FileSystemWatcher enqueued it -> queue processed it.
+   Binary observables from capture-final.log:
+     FOLDER_LISTED=2 (textbox value + list row)
+     WATCH_STATUS_VISIBLE=1 ("Watching 1 folder(s).")
+     WROTE_FILE=...\task10-shots\watched\Casting_Demo_jt95.jt SIZE=2877106
+     WATCH_ENQUEUED_ROWS=1
+     WATCH_JOB_SETTLED=6
+   Visible in image: "Watching 1 folder(s).", the configured folder path with a
+     Remove button, Start/Stop watch controls, and "Completed (100%)" status.
+
+-------------------------------------------------------------------------------
+NOTES
+- No .jt or .pdf fixture is present in this repository; only the three PNGs and
+  this manifest were added under assets/.
+- The 12 pre-existing concept PNGs remain untouched; they illustrate unbuilt or
+  planning-stage ideas and are labeled "Concept" on the pages.
+- The desktop app is INTERNAL / TESTED, not publicly released. No version-bump
+  or public-release claim is made anywhere on the site.
+- Process-exit assertion: WindowPattern.Close and WM_CLOSE were both attempted;
+  EXITED_AFTER_CLOSE=False in this capture session (the Viewer page with its
+  live Helix viewport remained in the Frame back stack). The stray process was
+  killed at cleanup. Clean-exit evidence for the Batch-only flow is in the
+  task-9 and task-12 evidence files; this manifest does not claim a clean exit.
