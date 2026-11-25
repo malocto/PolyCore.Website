@@ -3,7 +3,7 @@ import path from 'node:path';
 
 const root = process.cwd();
 const htmlFiles = ['index.html', 'features.html', 'formats.html', 'developers.html', 'pricing.html'];
-const mdFiles = ['README.md', 'docs/PRODUCT-BRIEF.md', 'docs/SDK-API-CONCEPT.md', 'docs/SUPPORT.md', 'docs/LEGAL-PLACEHOLDER.md', 'docs/WEBSITE-ROADMAP.md', 'docs/FORMAT-MATRIX.md'];
+const mdFiles = ['README.md', 'docs/PRODUCT-BRIEF.md', 'docs/SDK-API-CONCEPT.md', 'docs/SUPPORT.md', 'docs/LEGAL-PLACEHOLDER.md', 'docs/WEBSITE-ROADMAP.md', 'docs/FORMAT-MATRIX.md', 'docs/PLATFORM-COMPATIBILITY.md', 'docs/RELEASE-NOTES.md', 'docs/SECURITY-LICENSING.md', 'docs/ASSET-AUDIT.md'];
 const stateLabels = ['state-concept', 'state-tested', 'state-internal', 'state-planned'];
 const forbidden = ['released desktop', '0.4.0', 'binding terms', 'binding legal', 'EULA', 'Privacy Policy', 'Terms of Service'];
 
