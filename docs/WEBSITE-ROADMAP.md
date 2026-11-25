@@ -23,4 +23,5 @@ Current reality (2026-11-25): desktop app = internal, not publicly released; JT 
    canonical list, `docs/SDK-API-CONCEPT.md`, `docs/SUPPORT.md`, linked from every capability page.
 6. ~~Make format matrix capability-specific and mark planned, tested and released states
    separately.~~ Done: `docs/FORMAT-MATRIX.md` capability-specific table with tested/planned/research labels.
-7. Ensure transparent image assets have real alpha channels and optimize file size (open item).
+7. ~~Ensure transparent image assets have real alpha channels and optimize file size.~~ Done:
+   `docs/ASSET-AUDIT.md` records real alpha and pixel-identical lossless sizes (2636.6 KB and 2162.2 KB).

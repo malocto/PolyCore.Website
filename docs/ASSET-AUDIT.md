@@ -14,14 +14,14 @@ All three real captures are unmodified screen recordings of the standalone x64 R
 
 | File | Dimensions | Pixel format | Real alpha | Size |
 | --- | --- | --- | --- | --- |
-| polycore-engine-cutout.png | 1536x1024 | 32bpp ARGB | yes | 2696.7 KB |
-| polycore-studio-ui-transparent.png | 1536x1024 | 32bpp ARGB | yes | 2247.6 KB |
+| polycore-engine-cutout.png | 1536x1024 | 32bpp ARGB | yes | 2636.6 KB |
+| polycore-studio-ui-transparent.png | 1536x1024 | 32bpp ARGB | yes | 2162.2 KB |
 
-Both transparent concept assets have real alpha channels (not placeholder transparency). Their file sizes remain large; lossless optimization is a deferred hygiene item and is not applied here to avoid altering reviewed concept art.
+Both transparent concept assets have real alpha channels (not placeholder transparency) and are pixel-identical to the reviewed originals after lossless PNG re-encoding: 2696.7 KB to 2636.6 KB and 2247.6 KB to 2162.2 KB (see evidence task-1).
 
 ## Verification
 
-Measured with `System.Drawing.Image.FromFile` and `PixelFormat`; sizes from `FileInfo.Length`. No screenshot is composited or edited. No fixture or generated export is committed to the website repository.
+Dimensions and pixel format measured with `System.Drawing.Image.FromFile` and `PixelFormat`; sizes from `FileInfo.Length`. Lossless optimization verified with Pillow RGBA byte equality, dimensions and alpha extrema (evidence task-1). No screenshot is composited or edited. No fixture or generated export is committed to the website repository.
 
 ## Links
 
