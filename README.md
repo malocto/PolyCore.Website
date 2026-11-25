@@ -15,7 +15,7 @@ Current reality (2026-11-25): desktop app state = internal, not publicly release
 Open `index.html` in a modern browser. Static site; no build system required.
 
 ## Assets
-`assets/` contains concept illustrations. `polycore-studio-ui-transparent.png` is a transparent-background composite concept visual. Verify the alpha channel when reusing assets.
+`assets/` contains both concept illustrations and three real, unmodified screen captures of the internal x64 Release desktop app: `polycore-viewer-jt95-real.png`, `polycore-batch-mixed-statuses-real.png` and `polycore-watched-folders-real.png`. Source fixtures, exact capture commands and observed states are recorded in `assets/SCREENSHOT-MANIFEST.txt`. The 12 concept PNGs remain for unbuilt/planning sections only. `polycore-studio-ui-transparent.png` is a transparent-background composite concept visual; verify the alpha channel when reusing it. No `.jt` or `.pdf` fixture is stored in this repository.
 
 ## Status
 Website and UI imagery are design concepts, not shipped software. Format support, API examples, pricing and feature availability require implementation and validation. See `docs/`.
