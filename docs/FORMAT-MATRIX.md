@@ -2,10 +2,10 @@
 
 The website matrix is a planning view; statements here distinguish verified implementation from roadmap items. State labels: concept (unbuilt), internal (desktop app), tested (verified adapters), planned (not yet built). Capability is determined by the specific adapter and tested file variants.
 
-Current reality (2026-11-25): desktop app = internal, not publicly released; JT 9.5/10.5 reader = tested; OBJ/STL/PLY/glTF read-write = tested; FBX/USD/STEP/IGES/IFC and JT writer = planned.
+Current reality (2026-11-25): desktop app = internal, not publicly released; JT 9.5/10.2/10.5 reader = tested (10.2 partial geometry); OBJ/STL/PLY/glTF read-write = tested; FBX/USD/STEP/IGES/IFC and JT writer = planned.
 
 ## Verified adapters
-- **JT read (state: tested):** C#/.NET 10 JT 9.5/10.5 reader in `PolyCore.Formats.JT`, with hierarchy, transforms,
+- **JT read (state: tested):** C#/.NET 10 JT 9.5/10.2/10.5 reader in `PolyCore.Formats.JT`, with hierarchy, transforms,
   tessellation and optional opaque payloads. No JT writer (state: planned).
 - **OBJ read/write (state: tested):** `PolyCore.Formats.Obj`, geometry with per-corner UVs (`v/vt`, `v/vt/vn`, negative indices); MTL/textures unsupported.
 - **STL read/write (state: tested):** `PolyCore.Formats.Stl`, ASCII and binary; geometry only.
@@ -19,7 +19,7 @@ State labels: `tested` = verified by tests; `internal` = implemented in the inte
 
 | Format family | Read | Write | Scene/assembly | Materials/textures | State |
 | --- | --- | --- | --- | --- | --- |
-| JT 9.5 / 10.5 | tested | unsupported (planned) | tested (hierarchy, transforms) | opaque payloads only | tested |
+| JT 9.5 / 10.2 / 10.5 | tested | unsupported (planned) | tested (hierarchy, transforms; 10.2 partial) | opaque payloads only | tested |
 | OBJ | tested | tested | unsupported | per-corner UVs; no MTL/textures | tested |
 | STL | tested | tested | unsupported | unsupported | tested |
 | PLY | tested | tested | unsupported | colors only | tested |

@@ -10,14 +10,14 @@ Current reality (2026-11-25): public packages are version 0.3.0 in the local fee
 
 | Version | State | Notes |
 | --- | --- | --- |
-| 0.3.0 | Tested (local feed) | Apache-2.0 open core, JT 9.5/10.5 read adapter, OBJ/STL/PLY/glTF read-write adapters, Framework jobs and registry, CLI tooling. |
+| 0.3.0 | Tested (local feed) | Apache-2.0 open core, JT 9.5/10.2/10.5 read adapter (10.2 partial geometry), OBJ/STL/PLY/glTF read-write adapters, Framework jobs and registry, CLI tooling. |
 | 0.3.1+ | Planned | Only with a real public contract change; no version bump without one. No 0.4.0 or 1.0.0 claim. |
 
 ## Tested capability boundaries
 
-- JT reader: 9.5 and 10.5 only, tessellated geometry, hierarchy, transforms and optional opaque payloads; no JT writer.
+- JT reader: 9.5, 10.2 (partial geometry) and 10.5, with tessellated geometry, hierarchy, transforms and optional opaque payloads; no JT writer.
 - Read/write adapters: OBJ (geometry with per-corner UVs; MTL/textures unsupported), STL (ASCII/binary geometry), PLY (vertices/normals/colors), glTF 2.0/GLB (embedded buffers only).
-- Default test suite is precondition-gated on gitignored fixtures: 72/72 without fixtures; full solution with the partial canonical set reports 165 passed, 3 named skips, 0 failed (168 total); 168/168 only with the complete fixture set via `-WithFixtures`. No fabricated pass counts.
+- Default test suite is precondition-gated on gitignored fixtures: 78/78 without fixtures; full solution with the partial canonical set reports 171 passed, 3 named skips, 0 failed (174 total); 174/174 only with the complete fixture set via `-WithFixtures`. No fabricated pass counts.
 - Bulk corpus decode gate: scan-within-budget passes; golden-baseline gate is fixture-aware: 20 rows verified and 6 explicit `SKIP-FIXTURE` diagnostics in the partial set; 26/26 only with the complete fixture set; not auto-refreshed.
 
 ## Desktop app (internal, unreleased)
