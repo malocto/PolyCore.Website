@@ -7,7 +7,7 @@ PolyCore is a Windows-first 3D file-format library and desktop toolkit. The plan
 - **Core & framework:** C# / .NET
 - **Desktop GUI:** WinUI 3, Windows client
 - **Architecture:** modular format adapters, shared scene/data model, service layer, job orchestration, diagnostics
-- **Existing asset:** a working C#/.NET 10 JT 9.5/10.5 reader in the sibling `../PolyCore/` repository, already integrated source-first behind `PolyCore.Core` contracts through a read-only JT adapter.
+- **Existing asset:** a working C#/.NET 10 JT 9.5/10.2/10.5 reader in the sibling `../PolyCore/` repository, already integrated source-first behind `PolyCore.Core` contracts through a read-only JT adapter.
 
 ## Product goals
 1. Reliable 3D file access and inspection.
