@@ -7,7 +7,7 @@ Current reality (2026-11-25): desktop app = internal, not publicly released; JT 
 ## Verified adapters
 - **JT read (state: tested):** C#/.NET 10 JT 9.5/10.5 reader in `PolyCore.Formats.JT`, with hierarchy, transforms,
   tessellation and optional opaque payloads. No JT writer (state: planned).
-- **OBJ read/write (state: tested):** `PolyCore.Formats.Obj`, geometry subset only; MTL/textures unsupported.
+- **OBJ read/write (state: tested):** `PolyCore.Formats.Obj`, geometry with per-corner UVs (`v/vt`, `v/vt/vn`, negative indices); MTL/textures unsupported.
 - **STL read/write (state: tested):** `PolyCore.Formats.Stl`, ASCII and binary; geometry only.
 - **PLY read/write (state: tested):** `PolyCore.Formats.Ply`, ASCII and binary; vertices, normals and colors.
 - **glTF 2.0/GLB read/write (state: tested):** `PolyCore.Formats.Gltf`, embedded buffers only; no external URIs,
@@ -20,7 +20,7 @@ State labels: `tested` = verified by tests; `internal` = implemented in the inte
 | Format family | Read | Write | Scene/assembly | Materials/textures | State |
 | --- | --- | --- | --- | --- | --- |
 | JT 9.5 / 10.5 | tested | unsupported (planned) | tested (hierarchy, transforms) | opaque payloads only | tested |
-| OBJ | tested | tested | unsupported | geometry subset only | tested |
+| OBJ | tested | tested | unsupported | per-corner UVs; no MTL/textures | tested |
 | STL | tested | tested | unsupported | unsupported | tested |
 | PLY | tested | tested | unsupported | colors only | tested |
 | glTF 2.0 / GLB | tested | tested | basic geometry/transforms | embedded buffers only | tested |
