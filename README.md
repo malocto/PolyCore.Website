@@ -2,7 +2,7 @@
 
 Responsive multi-page concept website for PolyCore, a planned Windows-first 3D file-format library/toolkit. Technical positioning: **C# core/framework + internal WinUI 3 Windows desktop app (state: internal, not publicly released)**. The JT reader in the sibling `../PolyCore/` workspace is the working technical foundation. The desktop app and additional format support are roadmap items. This folder is an independent git repository, extracted from the public repo during the 2026-11-23 restructure.
 
-Current reality (2026-11-25): desktop app state = internal, not publicly released; JT 9.5/10.2/10.5 reader state = tested (10.2 partial geometry); OBJ/STL/PLY/glTF read-write state = tested; FBX/USD/STEP/IGES/IFC and JT writer state = planned.
+Current reality (2026-11-25): desktop app state = internal, not publicly released; JT 9.5/10.2/10.5 reader state = tested; OBJ/STL/PLY/glTF read-write state = tested; FBX/USD/STEP/IGES/IFC and JT writer state = planned.
 
 ## Pages
 - `index.html` — landing page

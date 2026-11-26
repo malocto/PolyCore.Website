@@ -16,11 +16,11 @@ Concept documentation describing the tested internal/unreleased state. No releas
 
 ## Format coverage summary
 
-See the [format matrix](FORMAT-MATRIX.md) for capability-specific tested, planned and research labels. JT 9.5/10.2/10.5 read (10.2 partial geometry) and OBJ/STL/PLY/glTF read-write are tested; FBX/USD/STEP/IGES/IFC and the JT writer are planned/research, not implemented.
+See the [format matrix](FORMAT-MATRIX.md) for capability-specific tested, planned and research labels. JT 9.5/10.2/10.5 read and OBJ/STL/PLY/glTF read-write are tested; FBX/USD/STEP/IGES/IFC and the JT writer are planned/research, not implemented.
 
 ## Known boundaries
 
-- JT versions other than 9.5/10.2/10.5 are unsupported; 10.2 is tested with partial geometry.
+- JT versions other than 9.5/10.2/10.5 are unsupported.
 - Native Helix viewport resources are disposed on window close for a clean exit; verified on the x64 Release surface only.
 - Repeated-import lifecycle smoke covers three local fixtures with clean exit and unchanged crash log (see internal QA evidence).
 
