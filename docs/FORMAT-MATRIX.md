@@ -8,7 +8,7 @@ Current reality (2026-11-25): desktop app = internal, not publicly released; JT 
 - **JT read (state: tested):** C#/.NET 10 JT 9.5/10.2/10.5 reader in `PolyCore.Formats.JT`, with hierarchy, transforms,
   tessellation, mapped enterprise metadata keys and a PMI presence/version census; payload bytes stay raw.
   Semantic PMI/GD&T and exact B-Rep decode are roadmap items. No JT writer (state: planned).
-- **OBJ read/write (state: tested):** `PolyCore.Formats.Obj`, geometry with per-corner UVs (`v/vt`, `v/vt/vn`, negative indices); MTL/textures unsupported.
+- **OBJ read/write (state: tested):** `PolyCore.Formats.Obj`, geometry with per-corner UVs (`v/vt`, `v/vt/vn`, negative indices); file-path imports expose sibling MTL values as metadata (traversal rejected); textures and MTL export unsupported.
 - **STL read/write (state: tested):** `PolyCore.Formats.Stl`, ASCII and binary; geometry only.
 - **PLY read/write (state: tested):** `PolyCore.Formats.Ply`, ASCII and binary; vertices, normals and colors.
 - **glTF 2.0/GLB read/write (state: tested):** `PolyCore.Formats.Gltf`, embedded buffers and relative external buffers on file-path imports (absolute paths and traversal rejected);
