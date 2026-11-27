@@ -17,7 +17,7 @@ Current reality (2026-11-25): public packages are version 0.3.0 in the local fee
 
 - JT reader: 9.5, 10.2 and 10.5, with tessellated geometry, hierarchy, transforms, mapped enterprise metadata keys and PMI presence/version census; import reads seekable streams in bounded windows, spools non-seekable streams to a temporary file and uses the same windowed path for file-based CLI/scanner reads; semantic PMI/GD&T and exact B-Rep remain roadmap items; no JT writer.
 - Read/write adapters: OBJ (geometry with per-corner UVs; file-path imports expose MTL values and object/group names as metadata; textures/MTL export unsupported), STL (ASCII/binary geometry), PLY (vertices/normals/colors), glTF 2.0/GLB (embedded and relative external buffers on file-path imports; traversal rejected; PBR factors as metadata).
-- Default test suite is precondition-gated on gitignored fixtures: 94/94 JtFormat and 181/181 solution tests without fixtures; full solution with the partial canonical set reports 223 passed, 3 named skips, 0 failed (226 total); 226/226 only with the complete fixture set via `-WithFixtures`. No fabricated pass counts.
+- Default test suite is precondition-gated on gitignored fixtures: 96/96 JtFormat and 183/183 solution tests without fixtures; full solution with the partial canonical set reports 225 passed, 3 named skips, 0 failed (228 total); 228/228 only with the complete fixture set via `-WithFixtures`. No fabricated pass counts.
 - Bulk corpus decode gate: scan-within-budget passes; golden-baseline gate is fixture-aware: 20 rows verified and 6 explicit `SKIP-FIXTURE` diagnostics in the partial set; 26/26 only with the complete fixture set; not auto-refreshed.
 
 ## Desktop app (internal, unreleased)
