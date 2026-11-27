@@ -11,8 +11,8 @@ Current reality (2026-11-25): desktop app = internal, not publicly released; JT 
 - **OBJ read/write (state: tested):** `PolyCore.Formats.Obj`, geometry with per-corner UVs (`v/vt`, `v/vt/vn`, negative indices); file-path imports expose sibling MTL values as metadata (traversal rejected); textures and MTL export unsupported.
 - **STL read/write (state: tested):** `PolyCore.Formats.Stl`, ASCII and binary; geometry only.
 - **PLY read/write (state: tested):** `PolyCore.Formats.Ply`, ASCII and binary; vertices, normals and colors.
-- **glTF 2.0/GLB read/write (state: tested):** `PolyCore.Formats.Gltf`, embedded buffers and relative external buffers on file-path imports (absolute paths and traversal rejected);
-  no Draco/meshopt, animation, skinning or morph targets.
+- **glTF 2.0/GLB read/write (state: tested):** `PolyCore.Formats.Gltf`, embedded buffers and relative external buffers on file-path imports (absolute paths and traversal rejected); PBR factors exposed as metadata;
+  no textures, Draco/meshopt, animation, skinning or morph targets.
 
 ## Capability-specific matrix
 
